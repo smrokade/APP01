@@ -2,7 +2,11 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
+
+import matplotlib as plt
+from matplotlib import pyplot as pllt
+
 import seaborn as sns
 
 from sklearn.ensemble import RandomForestClassifier
@@ -26,7 +30,7 @@ def main():
         
         st.markdown('### Analysing column relations')
         st.text('Correlations:')
-        fig, ax = plt.subplots(figsize=(10,10))
+        fig, ax = pllt.subplots(figsize=(10,10))
         sns.heatmap(df.corr(), annot=True, ax=ax)
         st.pyplot(fig)
         st.text('Effect of the different classes')
